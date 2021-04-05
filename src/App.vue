@@ -50,7 +50,7 @@ export default {
   },
   mounted: function () {
     //this.reloadTemperatures();
-    setInterval(() => this.reloadTemperatures(), 10000);
+    setInterval(() => this.reloadTemperatures(), 10000); // reload every 10 mins
   },
   data: () => ({
     drawer: false,
