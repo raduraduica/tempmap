@@ -23,7 +23,6 @@ export default {
     return {
       google: null,
       map: null,
-
     }
   },
   async mounted() {

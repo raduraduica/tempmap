@@ -1,0 +1,56 @@
+[
+  {
+    "id": "craiova",
+    "position": {
+      "lat":44.20,
+      "lng": 23.80
+    },
+    "temperature": "..",
+    "marker": null
+  },
+  {
+    "id": "bailesti",
+    "position": {
+      "lat": 44.46,
+      "lng": 23.56
+    },
+    "temperature": "..",
+    "marker": null
+  },
+  {
+    "id": "scaiesti",
+    "position": {
+      "lat": 44.52,
+      "lng": 23.57
+    },
+    "temperature": "..",
+    "marker": null
+  },
+  {
+    "id": "isalnita",
+    "position": {
+      "lat": 44.49,
+      "lng": 22.93
+    },
+    "temperature": "..",
+    "marker": null
+  },
+  {
+    "id": "giurgita",
+    "position": {
+      "lat": 44.02,
+      "lng": 23.62
+    },
+    "temperature": "..",
+    "marker": null
+  },
+  {
+    "id": "segarcea",
+    "position": {
+      "lat": 44.09,
+      "lng": 23.72
+    },
+    "temperature": "..",
+    "marker": null
+  }
+]

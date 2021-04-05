@@ -10,7 +10,7 @@
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Temperaturi Judetul Dolj</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -39,6 +39,7 @@ import MapView from './components/MapView';
 import GoogleMapMarker from "./components/GoogleMapMarker";
 
 import { mapSettings } from "@/constants/mapSettings";
+let locations = require('/public/locations.json');
 
 export default {
   name: 'App',
@@ -52,40 +53,16 @@ export default {
     setInterval(() => this.reloadTemperatures(), 10000);
   },
   data: () => ({
-    drawer: null,
-    apiKey: 'AIzaSyB33DPW2ZbYhMz90iS6J3fUG-T0OHWfnxI',
-    markers: [
-      {
-        id: "craiova",
-        position: {lat:44.20, lng: 23.80},
-        temperature: "22.7",
-        marker: null
-      },
-      {
-        id: "bailesti",
-        position: { lat: 44.46, lng: 23.56 },
-        temperature: "20.4",
-        marker: null
-      },
-      {
-        id: "scaiesti",
-        position: { lat: 44.52, lng: 23.57 },
-        temperature: "21.5",
-        marker: null
-      },
-      {
-        id: "isalnita",
-        position: { lat: 44.49, lng: 22.93 },
-        temperature: "22.3",
-        marker: null
-      }
-    ]
+    drawer: false,
+    apiKey: 'AIzaSyB33DPW2ZbYhMz90iS6J3fUG-T0OHWfnxI', // google map api key
+    openWeatherApiKey: 'b27ea89a6bc894e8099332416bb46018', // open weather api key
+    markers: locations
   }),
   methods: {
     reloadTemperatures() {
       for (let index in this.markers) {
         let marker = this.markers[index];
-        axios.get('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + marker.position.lat + '&lon=' + marker.position.lng + '&appid=b27ea89a6bc894e8099332416bb46018')
+        axios.get('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + marker.position.lat + '&lon=' + marker.position.lng + '&appid=' + this.openWeatherApiKey )
              .then(function (response) {
                 let label = marker.marker.getLabel();
                 label.text = response.data.main.temp + '';
