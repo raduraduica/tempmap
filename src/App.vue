@@ -4,7 +4,22 @@
         v-model="drawer"
         app
     >
-      <!--  -->
+      <v-list rounded>
+        <v-subheader>LOCATII</v-subheader>
+        <v-list-item-group
+            v-model="selectedItem"
+            color="primary"
+        >
+          <v-list-item
+              v-for="(item, i) in markers"
+              :key="i"
+          >
+            <v-list-item-content>
+              <v-list-item-title v-text="item.id"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
     </v-navigation-drawer>
 
     <v-app-bar app>
@@ -53,7 +68,7 @@ export default {
     setInterval(() => this.reloadTemperatures(), 10000); // reload every 10 mins
   },
   data: () => ({
-    drawer: false,
+    drawer: true,
     apiKey: 'AIzaSyB33DPW2ZbYhMz90iS6J3fUG-T0OHWfnxI', // google map api key
     openWeatherApiKey: 'b27ea89a6bc894e8099332416bb46018', // open weather api key
     markers: locations
@@ -68,26 +83,8 @@ export default {
                 label.text = response.data.main.temp + '';
                 marker.marker.setLabel(label);
              });
-        // var label = this.markers[index].marker.getLabel();
-        // var t = this.getTemperature(this.markers[index]);
-        // console.log(t);
-        // t;
-        // this.markers[index].marker.setLabel(label);
       }
-    }/*,
-    getTemperature(marker) {
-      const promise = 1;
-      console.log(promise.data.main);
-
-      /!*if ((marker.position.lat != undefined) && (marker.position.lng != undefined)) {
-        const promise = axios.get('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + marker.position.lat + '&lon=' + marker.position.lng + '&appid=b27ea89a6bc894e8099332416bb46018');
-        const data = promise.then((response) => response.data);
-        console.log(data.promise);
-        return data.data.main.temp + ''
-      }
-
-      return null;*!/
-    }*/
+    }
   },
   computed: {
     mapConfig() {

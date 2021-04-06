@@ -1,18 +1,27 @@
 [
   {
-    "id": "craiova",
+    "id": "Craiova",
     "position": {
-      "lat":44.20,
-      "lng": 23.80
+      "lat":44.319,
+      "lng": 23.802
     },
     "temperature": "..",
     "marker": null
   },
   {
-    "id": "bailesti",
+    "id": "Palilula",
     "position": {
-      "lat": 44.46,
-      "lng": 23.56
+      "lat": 44.269,
+      "lng": 23.720
+    },
+    "temperature": "..",
+    "marker": null
+  },
+  {
+    "id": "Bailesti",
+    "position": {
+      "lat": 44.022,
+      "lng": 23.328
     },
     "temperature": "..",
     "marker": null

@@ -20,13 +20,13 @@ const COLORS = {
 
 const POINT_MARKER_ICON_CONFIG = {
     path: "M 0, 0 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0",
-    // path: "M22-48h-44v43h16l6 5 6-5h16z",
+    //path: "M22-48h-44v43h16l6 5 6-5h16z",
     // path: "M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z",
-    strokeOpacity: 0.8,
-    strokeWeight: 4,
+    strokeOpacity: 0.4,
+    strokeWeight: 2,
     strokeColor: COLORS.POINT,
     fillColor: COLORS.POINT_FILL,
-    fillOpacity: 0.9,
+    fillOpacity: 0.1,
     scale: 5
 };
 
@@ -52,7 +52,7 @@ const LINE_PATH_CONFIG = {
 
 const mapSettings = {
     clickableIcons: false,
-    streetViewControl: false,
+    streetViewControl: true,
     panControlOptions: false,
     gestureHandling: "cooperative",
     backgroundColor: COLORS.LANDSCAPE,
@@ -67,37 +67,37 @@ const mapSettings = {
         {
             featureType: "landscape",
             stylers: [
-                { hue: COLORS.LANDSCAPE },
-                { saturation: 50.2 },
-                { lightness: -34.8 },
-                { gamma: 1 }
+      //          { hue: COLORS.LANDSCAPE },
+        //        { saturation: 50.2 },
+        //        { lightness: -34.8 },
+        //        { gamma: 1 }
             ]
         },
         {
             featureType: "poi",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "road.highway",
             stylers: [
-                { hue: COLORS.LANDSCAPE },
-                { saturation: -19.8 },
-                { lightness: -1.8 },
-                { gamma: 1 }
+                // { hue: COLORS.LANDSCAPE },
+                // { saturation: -19.8 },
+                // { lightness: -1.8 },
+                // { gamma: 1 }
             ]
         },
         {
             featureType: "road.arterial",
             stylers: [
-                { hue: COLORS.LANDSCAPE },
-                { saturation: 72.4 },
-                { lightness: -32.6 },
-                { gamma: 1 }
+                // { hue: COLORS.LANDSCAPE },
+                // { saturation: 72.4 },
+                // { lightness: -32.6 },
+                // { gamma: 1 }
             ]
         },
         {
             featureType: "road.local",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "transit",
@@ -105,11 +105,14 @@ const mapSettings = {
         },
         {
             featureType: "administrative.province",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "administrative.locality",
-            stylers: [{ visibility: "on" }, { color: COLORS.BORDERS }]
+            stylers: [
+                { visibility: "on" },
+                { color: COLORS.BORDERS }
+            ]
         },
         {
             featureType: "administrative.province",
@@ -117,11 +120,11 @@ const mapSettings = {
         },
         {
             featureType: "administrative.land_parcel",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "administrative.neighborhood",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "administrative.country",
@@ -131,7 +134,7 @@ const mapSettings = {
         {
             featureType: "administrative",
             elementType: "labels",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "water",
