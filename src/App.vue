@@ -7,7 +7,6 @@
       <v-list rounded>
         <v-subheader>LOCATII</v-subheader>
         <v-list-item-group
-            v-model="selectedItem"
             color="primary"
         >
           <v-list-item
@@ -65,25 +64,34 @@ export default {
   },
   mounted: function () {
     //this.reloadTemperatures();
-    setInterval(() => this.reloadTemperatures(), 10000); // reload every 10 mins
+    this.interv = setInterval(() => this.reloadTemperatures(), this.timeout);
   },
   data: () => ({
-    drawer: true,
+    timeout: 10000,
+    drawer: false,
     apiKey: 'AIzaSyB33DPW2ZbYhMz90iS6J3fUG-T0OHWfnxI', // google map api key
     openWeatherApiKey: 'b27ea89a6bc894e8099332416bb46018', // open weather api key
-    markers: locations
+    markers: locations,
+    interv: null
   }),
   methods: {
     reloadTemperatures() {
       for (let index in this.markers) {
         let marker = this.markers[index];
-        axios.get('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + marker.position.lat + '&lon=' + marker.position.lng + '&appid=' + this.openWeatherApiKey )
-             .then(function (response) {
-                let label = marker.marker.getLabel();
-                label.text = response.data.main.temp + '';
-                marker.marker.setLabel(label);
-             });
+
+        axios.get('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + marker.position.lat + '&lon=' + marker.position.lng + '&appid=' + this.openWeatherApiKey)
+            .then(function (response) {
+              let label = marker.marker.getLabel();
+              label.text = response.data.name + ' (' + response.data.main.temp + '°C)';
+              //label.text = marker.id + ' (' + marker.temperature + '°C)';
+              label.color = '#035fff';
+              label.fontSize = '18px';
+              marker.marker.setLabel(label);
+            });
       }
+
+      clearInterval(this.interv);
+      this.interv = setInterval(() => this.reloadTemperatures(), 600000);
     }
   },
   computed: {

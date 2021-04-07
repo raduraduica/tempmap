@@ -25,7 +25,7 @@ export default {
       marker: this.marker,
       map: this.map,
       icon: POINT_MARKER_ICON_CONFIG,
-      label: {text: this.marker.temperature, color: "rgb(77,109,155)", fontSize: "16px", fontWeight:'bold'},
+      label: {text: this.marker.temperature, color: "#035fff", fontSize: "18px", fontWeight:'bold'},
     });
   },
 

@@ -5,7 +5,7 @@
       "lat":44.319,
       "lng": 23.802
     },
-    "temperature": "..",
+    "temperature": "...",
     "marker": null
   },
   {
@@ -14,7 +14,7 @@
       "lat": 44.269,
       "lng": 23.720
     },
-    "temperature": "..",
+    "temperature": "...",
     "marker": null
   },
   {
@@ -23,43 +23,43 @@
       "lat": 44.022,
       "lng": 23.328
     },
-    "temperature": "..",
+    "temperature": "...",
     "marker": null
   },
   {
-    "id": "scaiesti",
+    "id": "Scaiesti",
     "position": {
       "lat": 44.52,
       "lng": 23.57
     },
-    "temperature": "..",
+    "temperature": "...",
     "marker": null
   },
   {
-    "id": "isalnita",
+    "id": "Isalnita",
     "position": {
       "lat": 44.49,
       "lng": 22.93
     },
-    "temperature": "..",
+    "temperature": "...",
     "marker": null
   },
   {
-    "id": "giurgita",
+    "id": "Giurgita",
     "position": {
       "lat": 44.02,
       "lng": 23.62
     },
-    "temperature": "..",
+    "temperature": "...",
     "marker": null
   },
   {
-    "id": "segarcea",
+    "id": "Segarcea",
     "position": {
       "lat": 44.09,
       "lng": 23.72
     },
-    "temperature": "..",
+    "temperature": "...",
     "marker": null
   }
 ]
