@@ -24,7 +24,7 @@
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Temperaturi Judetul Dolj</v-toolbar-title>
+      <v-toolbar-title>DIRECTIA REGIONALA DE DRUMURI SI PODURI CRAIOVA</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -69,8 +69,8 @@ export default {
   data: () => ({
     timeout: 10000,
     drawer: false,
-    apiKey: 'AIzaSyB33DPW2ZbYhMz90iS6J3fUG-T0OHWfnxI', // google map api key
-    openWeatherApiKey: 'b27ea89a6bc894e8099332416bb46018', // open weather api key
+    apiKey: process.env.VUE_APP_GMAP, // 'AIzaSyB33DPW2ZbYhMz90iS6J3fUG-T0OHWfnxI', // google map api key
+    openWeatherApiKey: process.env.VUE_APP_OPENWEATHER, //'b27ea89a6bc894e8099332416bb46018', // open weather api key
     markers: locations,
     interv: null
   }),
@@ -82,9 +82,9 @@ export default {
         axios.get('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + marker.position.lat + '&lon=' + marker.position.lng + '&appid=' + this.openWeatherApiKey)
             .then(function (response) {
               let label = marker.marker.getLabel();
-              label.text = response.data.name + ' (' + response.data.main.temp + '°C)';
+              label.text = marker.id + /*'' + response.data.name +*/ ' (' + response.data.main.temp + '°C)';
               //label.text = marker.id + ' (' + marker.temperature + '°C)';
-              label.color = '#035fff';
+              label.color = '#d85956';
               label.fontSize = '18px';
               marker.marker.setLabel(label);
             });
@@ -102,7 +102,7 @@ export default {
       }
     },
     mapCenter() {
-      return this.markers[0].position;
+      return this.markers[6].position;
     }
   }
 };

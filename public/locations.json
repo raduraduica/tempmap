@@ -1,63 +1,243 @@
 [
   {
-    "id": "Craiova",
+    "id": "Argetoaia",
     "position": {
-      "lat":44.319,
-      "lng": 23.802
+      "lat":44.520235,
+      "lng":23.3554395
     },
     "temperature": "...",
     "marker": null
   },
   {
-    "id": "Palilula",
+    "id": "Grecești",
     "position": {
-      "lat": 44.269,
-      "lng": 23.720
+      "lat": 44.4475893,
+      "lng": 23.2772386
     },
     "temperature": "...",
     "marker": null
   },
   {
-    "id": "Bailesti",
+    "id": "Scăeşti",
     "position": {
-      "lat": 44.022,
-      "lng": 23.328
+      "lat": 44.4621607,
+      "lng": 23.5626447
     },
     "temperature": "...",
     "marker": null
   },
   {
-    "id": "Scaiesti",
+    "id": "Botoșești-Paia",
     "position": {
-      "lat": 44.52,
-      "lng": 23.57
+      "lat": 44.404009,
+      "lng": 23.2573655
     },
     "temperature": "...",
     "marker": null
   },
   {
-    "id": "Isalnita",
+    "id": "Tălpaș",
     "position": {
-      "lat": 44.49,
-      "lng": 22.93
+      "lat": 44.6612334,
+      "lng": 23.7460243
     },
     "temperature": "...",
     "marker": null
   },
   {
-    "id": "Giurgita",
+    "id": "Valea Stanciului",
     "position": {
-      "lat": 44.02,
-      "lng": 23.62
+      "lat": 43.9866596,
+      "lng": 23.8483571
     },
     "temperature": "...",
     "marker": null
   },
   {
-    "id": "Segarcea",
+    "id": "Vârvor",
     "position": {
-      "lat": 44.09,
-      "lng": 23.72
+      "lat": 44.2246066,
+      "lng": 23.6241384
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Lazu",
+    "position": {
+      "lat": 44.293792,
+      "lng": 23.541799
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Băilești",
+    "position": {
+      "lat": 44.022565,
+      "lng": 23.3282661
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Plenița",
+    "position": {
+      "lat": 44.221481,
+      "lng": 23.1687819
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Amărăștii de Jos",
+    "position": {
+      "lat": 43.9506082,
+      "lng": 24.1597724
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Robănești",
+    "position": {
+      "lat": 44.311113,
+      "lng": 24.0120792
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Murgaşi",
+    "position": {
+      "lat": 44.5012768,
+      "lng": 23.8549026
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Leu",
+    "position": {
+      "lat": 44.1879958,
+      "lng": 23.9888942
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Mârșani",
+    "position": {
+      "lat": 44.0118445,
+      "lng": 24.0107917
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Drănic",
+    "position": {
+      "lat": 44.0548905,
+      "lng": 23.8403804
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Seaca de Padure",
+    "position": {
+      "lat": 44.366135,
+      "lng": 23.2999291
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Bulzeşti",
+    "position": {
+      "lat": 44.5183404,
+      "lng": 23.898556
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Sopot",
+    "position": {
+      "lat": 44.4109919,
+      "lng": 23.4860064
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Teslui",
+    "position": {
+      "lat": 44.2003105,
+      "lng": 24.1433482
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Giurgița",
+    "position": {
+      "lat": 44.0175219,
+      "lng": 23.6297706
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Cioroiași",
+    "position": {
+      "lat": 44.0846711,
+      "lng": 23.4431934
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Desa",
+    "position": {
+      "lat": 43.8704242,
+      "lng": 23.0211425
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Seaca de Câmp",
+    "position": {
+      "lat": 43.9337837,
+      "lng": 23.2165316
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Izvoare",
+    "position": {
+      "lat": 44.1473592,
+      "lng": 23.2954621
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Măceșu de Sus",
+    "position": {
+      "lat": 43.9166441,
+      "lng": 23.6990547
+    },
+    "temperature": "...",
+    "marker": null
+  },
+  {
+    "id": "Verbița",
+    "position": {
+      "lat": 44.3020974,
+      "lng": 23.1644898
     },
     "temperature": "...",
     "marker": null

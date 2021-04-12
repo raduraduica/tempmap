@@ -21,14 +21,14 @@ const COLORS = {
 const POINT_MARKER_ICON_CONFIG = {
     //path: "M 0, 0 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0",
     // path: "M22-48h-44v43h16l6 5 6-5h16z",
-     path: "M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z",
-    // path: "M11.462 1c-1.363 0-2.462 1.127-2.462 2.526v42.946c0 1.262 1.231 2.527 2.462 2.527 1.23 0 2.461-1.266 2.461-2.527v-25.894c.841-.367 1.659-.632 2.462-.632 4.923 0 12.185 6.317 17.231 6.317 2.151 0 5.231-.871 7.384-2.527v-17.684c-2.442 1.879-4.916 3.79-7.384 3.79-4.923 0-12.291-6.316-17.231-6.316-.83 0-1.64.152-2.462.316v-.316c0-1.399-1.099-2.526-2.461-2.526z",
-    strokeOpacity: 0.4,
+    // path: "M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z",
+     path: "M11.462 1c-1.363 0-2.462 1.127-2.462 2.526v42.946c0 1.262 1.231 2.527 2.462 2.527 1.23 0 2.461-1.266 2.461-2.527v-25.894c.841-.367 1.659-.632 2.462-.632 4.923 0 12.185 6.317 17.231 6.317 2.151 0 5.231-.871 7.384-2.527v-17.684c-2.442 1.879-4.916 3.79-7.384 3.79-4.923 0-12.291-6.316-17.231-6.316-.83 0-1.64.152-2.462.316v-.316c0-1.399-1.099-2.526-2.461-2.526z",
+    strokeOpacity: 0.7,
     strokeWeight: 2,
     strokeColor: COLORS.POINT,
     fillColor: COLORS.POINT_FILL,
     fillOpacity: 5,
-    scale: 0.8,
+    scale: 0.4,
     // labelOrigin: (-10, -30)
 };
 
@@ -53,7 +53,7 @@ const LINE_PATH_CONFIG = {
 };
 
 const mapSettings = {
-    clickableIcons: false,
+    clickableIcons: true,
     streetViewControl: true,
     panControlOptions: false,
     gestureHandling: "cooperative",
@@ -62,7 +62,7 @@ const mapSettings = {
     zoomControlOptions: {
         style: "SMALL"
     },
-    zoom: 9.5,
+    zoom: 9.7,
     minZoom: 2,
     maxZoom: 100,
     styles: [
@@ -82,19 +82,19 @@ const mapSettings = {
         {
             featureType: "road.highway",
             stylers: [
-                // { hue: COLORS.LANDSCAPE },
-                // { saturation: -19.8 },
-                // { lightness: -1.8 },
-                // { gamma: 1 }
+                { hue: COLORS.LANDSCAPE },
+                { saturation: -19.8 },
+                { lightness: -1.8 },
+                { gamma: 1 }
             ]
         },
         {
             featureType: "road.arterial",
             stylers: [
-                // { hue: COLORS.LANDSCAPE },
-                // { saturation: 72.4 },
-                // { lightness: -32.6 },
-                // { gamma: 1 }
+                { hue: COLORS.LANDSCAPE },
+                { saturation: 72.4 },
+                { lightness: -32.6 },
+                { gamma: 1 }
             ]
         },
         {
@@ -103,22 +103,25 @@ const mapSettings = {
         },
         {
             featureType: "transit",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "administrative.province",
-            stylers: [{ visibility: "off" }]
+            stylers: [{ visibility: "on" }]
         },
         {
             featureType: "administrative.locality",
             stylers: [
-                { visibility: "off" },
+                { visibility: "on" },
                 { color: COLORS.BORDERS }
             ]
         },
         {
             featureType: "administrative.province",
-            stylers: [{ visibility: "off" }, { color: COLORS.BORDERS }]
+            stylers: [
+                { visibility: "on" },
+                { color: COLORS.BORDERS }
+            ]
         },
         {
             featureType: "administrative.land_parcel",

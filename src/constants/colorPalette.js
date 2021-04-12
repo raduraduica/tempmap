@@ -4,7 +4,7 @@ export default {
     COLOR_LANDSCAPE: "#FFAD00",
     COLOR_BORDERS: "rgb(195,230,255)",
     COLOR_LINE: "rgb(255,255,255)",
-    COLOR_SELECTED_POINT: "rgb(0,184,83)",
+    COLOR_SELECTED_POINT: "rgb(0,25,184)",
 
     COLOR_BROWN: "rgb(139,69,19)",
     COLOR_BLACK: "rgb(0,0,0)",
