@@ -82,7 +82,7 @@ export default {
         axios.get('https://api.openweathermap.org/data/2.5/weather?units=metric&lat=' + marker.position.lat + '&lon=' + marker.position.lng + '&appid=' + this.openWeatherApiKey)
             .then(function (response) {
               let label = marker.marker.getLabel();
-              label.text = marker.id + /*'' + response.data.name +*/ ' (' + response.data.main.temp + '°C)';
+              label.text = marker.id + /*'' + response.data.name +*/ ' (' + Math.round(response.data.main.temp) + '°C)';
               //label.text = marker.id + ' (' + marker.temperature + '°C)';
               label.color = '#d85956';
               label.fontSize = '18px';
